@@ -9,8 +9,7 @@ jobs:
       - image: circleci/python:3.6.1
         environment:
             PIPENV_VENV_IN_PROJECT: true
-
-    working_directory: ~/repo
+        working_directory: ~/repo
 
     steps:
       - checkout

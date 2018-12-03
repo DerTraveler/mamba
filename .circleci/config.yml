@@ -9,13 +9,14 @@ jobs:
       - image: circleci/python:3.6.1
         environment:
             PIPENV_VENV_IN_PROJECT: true
-        working_directory: ~/repo
 
     steps:
       - checkout
       - run:
           command: |
             sudo pip install pipenv
+      - run:
+          command: |
             pipenv install
             mkdir -p test_results/mamba
       - run:

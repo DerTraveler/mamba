@@ -21,14 +21,6 @@ def example_names(examples):
     return [example.name for example in examples]
 
 
-IRRELEVANT_PATH = spec_abspath('without_inner_contexts.py')
-PENDING_DECORATOR_PATH = spec_abspath('with_pending_decorator.py')
-PENDING_DECORATOR_AS_ROOT_PATH = spec_abspath('with_pending_decorator_as_root.py')
-WITH_RELATIVE_IMPORT_PATH = spec_abspath('with_relative_import.py')
-WITH_TAGS_PATH = spec_abspath('with_tags.py')
-WITH_FOCUS_PATH = spec_abspath('with_focus.py')
-SHARED_CONTEXT_PATH = spec_abspath('with_shared_context.py')
-INCLUDED_CONTEXT_PATH = spec_abspath('with_included_context.py')
 
 
 def _load_module(path):

@@ -15,7 +15,7 @@ jobs:
       - run:
           command: |
             sudo pip install pipenv
-            pipenv install
+            pipenv install -d
             mkdir -p test_results/mamba
       - run:
           name: run tests

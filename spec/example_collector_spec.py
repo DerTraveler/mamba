@@ -36,7 +36,7 @@ def _load_module(path):
     return list(example_collector.modules())[0]
 
 
-with description(ExampleCollector):
+with _description(ExampleCollector):
     with context('when loading from file'):
         with it('loads module from absolute path'):
             module = _load_module(IRRELEVANT_PATH)

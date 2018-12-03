@@ -20,12 +20,6 @@ with description(ExampleGroup) as self:
         expect(self.example_group.name).to(equal(IRRELEVANT_DESCRIPTION))
 
     with context('when run'):
-        with before.each:
-            self.example = an_example()
-            self.example_group.append(self.example)
-
-            self.example_group.execute(self.reporter, runnable.ExecutionContext())
-
         with it('runs the example'):
             expect(self.example.was_run).to(be_true)
 

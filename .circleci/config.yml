@@ -15,13 +15,11 @@ jobs:
       - run:
           command: |
             sudo pip install pipenv
-      - run:
-          command: |
             pipenv install
             mkdir -p test_results/mamba
       - run:
           name: run tests
           command: |
-            pipenv run "mamba --format junit > test_results/mamba/results.xml"
+            pipenv run mamba --format junit > test_results/mamba/results.xml
       - store_test_results:
           path: test_results
